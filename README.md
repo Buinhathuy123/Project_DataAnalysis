@@ -23,13 +23,13 @@ graph LR
 ```
 ## ⚙️ Technologies Used
 
-Language: Python 3.x
+* Language: Python 3.x
 
-Data Processing: Pandas
+* Data Processing: Pandas
 
-Visualization: Matplotlib, Seaborn
+* Visualization: Matplotlib, Seaborn
 
-Data Analysis Concepts: Revenue Trends, Profit Margin, Delivery Time, Category & Regional Analysis
+* Data Analysis Concepts: Revenue Trends, Profit Margin, Delivery Time, Category & Regional Analysis
 
 ## 📁 Project Structure
 ```
@@ -43,34 +43,36 @@ sales-analysis-project/
 ## 🚀 How to Run
 ### Prerequisites
 
-Python 3.x installed on your machine.
+* Python 3.x installed on your machine.
 
-Required Python libraries: Pandas, Matplotlib, Seaborn.
+* Required Python libraries: Pandas, Matplotlib, Seaborn.
 
 1. Install Dependencies
-pip install pandas matplotlib seaborn
 
-2. Ensure Dataset Availability
+        pip install pandas matplotlib seaborn
 
-Place the train.csv file in the same directory as sales_analysis.py or adjust the path in the script.
+3. Ensure Dataset Availability
 
-3. Run the Analysis
-python sales_analysis.py
+        Place the train.csv file in the same directory as sales_analysis.py or adjust the path in the script.
 
-4. View Results
+4. Run the Analysis
+   
+        python sales_analysis.py
+
+5. View Results
 
 The script generates a line chart showing monthly revenue trends and saves it as:
 
-![Dashbroad Resual](/emr-cluster-steps-completed.png)
+![Dashbroad Resual](/monthly_sales_trend_improved.png)
 
 ## 📊 Results
 
-Monthly Revenue Trends: Shows revenue for each month with peak points highlighted and values displayed.
+* Monthly Revenue Trends: Shows revenue for each month with peak points highlighted and values displayed.
 
-Top 5 Sub-Categories: Identifies best-selling products.
+* Top 5 Sub-Categories: Identifies best-selling products.
 
-Regional Performance: Highlights revenue contribution by region and city.
+* Regional Performance: Highlights revenue contribution by region and city.
 
-Shipping Efficiency: Calculates average delivery time by shipping method.
+* Shipping Efficiency: Calculates average delivery time by shipping method.
 
-Profit Margin Estimation: Evaluates business efficiency assuming a 20% profit margin.
+* Profit Margin Estimation: Evaluates business efficiency assuming a 20% profit margin.
