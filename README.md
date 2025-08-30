@@ -1,85 +1,76 @@
-Phân Tích Dữ Liệu Bán Hàng - Sales Analysis
+# Sales Analysis Project
 
-MÔ TẢ DỰ ÁN
+A comprehensive sales data analysis project built with Python to extract insights on revenue trends, category and regional performance, and shipping efficiency.
 
-  Dự án này thực hiện phân tích dữ liệu bán hàng từ một tập dữ liệu giao dịch, trích xuất các thông tin chi tiết về xu hướng doanh thu, hiệu suất theo danh mục và khu vực, cũng như hiệu quả vận chuyển. Dự án sử dụng Python cùng với các thư viện Pandas, Matplotlib và Seaborn để xử lý và trực quan hóa dữ liệu.
+## 📋 Project Overview
 
-Tính năng chính
-    Phân tích xu hướng doanh thu: Theo dõi doanh thu theo tháng và năm
-    
-    Phân tích theo danh mục: Xác định danh mục và phân danh mục bán chạy nhất
-    
-    Phân tích theo khu vực: Đánh giá hiệu suất bán hàng theo vùng và thành phố
-    
-    Phân tích hiệu quả vận chuyển: Tính toán thời gian giao hàng trung bình theo phương thức vận chuyển
-    
-    Tính toán tỷ suất lợi nhuận: Đánh giá hiệu quả kinh doanh thông qua tỷ suất lợi nhuận
+This project demonstrates an end-to-end sales analysis workflow:
 
-Công nghệ sử dụng
-    Python 3.x
-    
-    Pandas: Để xử lý và phân tích dữ liệu
-    
-    Matplotlib: Để tạo biểu đồ cơ bản
-    
-    Seaborn: Để tạo biểu đồ nâng cao với giao diện đẹp mắt
+1. Extracts sales data from a CSV dataset.
 
-Cài đặt và chạy dự án
-1. Clone repository này về máy local của bạn
-2. Cài đặt các thư viện cần thiết:
-   
-       pip install pandas matplotlib seaborn
-   
-3. Đảm bảo bạn có file dữ liệu train.csv trong đường dẫn được chỉ định trong code
+2. Transforms it using Pandas for cleaning, feature engineering, and calculation of delivery times and profit margins.
 
-4. Chạy script Python để thực hiện phân tích và tạo biểu đồ:
+3. Analyzes revenue trends, category and sub-category performance, regional performance, and shipping efficiency.
 
+4. Visualizes insights with Matplotlib and Seaborn in clear, professional charts.
 
-       python sales_analysis.py
-Cấu trúc dữ liệu
-Tập dữ liệu bao gồm các cột sau:
+# 🏗️ Architecture
+```mermaid
+graph LR
+    A[Raw Sales Data<br>train.csv] --> B[Python Pandas & Seaborn<br>Data Processing & Analysis];
+    B -- Generates Charts --> C[Monthly Revenue Trends<br>Top Categories & Regions];
+    C --> D[Output Images<br>monthly_sales_trend_improved.png];
+```
+## ⚙️ Technologies Used
 
-    Order Date: Ngày đặt hàng
-    
-    Ship Date: Ngày giao hàng
-    
-    Ship Mode: Phương thức vận chuyển
-    
-    Category: Danh mục sản phẩm
-    
-    Sub-Category: Phân danh mục sản phẩm
-    
-    Sales: Doanh số
-    
-    Region: Khu vực
-    
-    City: Thành phố
+Language: Python 3.x
 
-Kết quả đầu ra
-Script sẽ tạo ra một biểu đồ đường thể hiện xu hướng doanh thu theo tháng, được lưu dưới dạng file ảnh monthly_sales_trend_improved.png với các đặc điểm:
+Data Processing: Pandas
 
-    Hiển thị doanh thu hàng tháng
-    
-    Đánh dấu điểm cao nhất
-    
-    Hiển thị giá trị tại mỗi điểm dữ liệu
-    
-    Định dạng trục Y với ký hiệu tiền tệ
-    
-    Thiết kế chuyên nghiệp với màu sắc và bố cục rõ ràng
+Visualization: Matplotlib, Seaborn
 
-Phân tích dữ liệu được thực hiện
+Data Analysis Concepts: Revenue Trends, Profit Margin, Delivery Time, Category & Regional Analysis
 
-    Chuyển đổi định dạng ngày tháng
-    
-    Trích xuất thông tin tháng và năm từ ngày đặt hàng
-    
-    Tính toán thời gian giao hàng
-    
-    Tính toán tỷ suất lợi nhuận (giả định tỷ lệ lợi nhuận là 20%)
-    
-    Phân tích doanh thu theo nhiều chiều: thời gian, danh mục, khu vực
-    
-    Xác định top 5 phân danh mục bán chạy nhất
-    
-    Tính thời gian giao hàng trung bình theo phương thức vận chuyển  
+## 📁 Project Structure
+```
+sales-analysis-project/
+├── sales_analysis.py          # Main Python script for analysis
+├── train.csv                  # Sales dataset
+├── monthly_sales_trend_improved.png  # Output chart  
+└── README.md
+```
+
+## 🚀 How to Run
+### Prerequisites
+
+Python 3.x installed on your machine.
+
+Required Python libraries: Pandas, Matplotlib, Seaborn.
+
+1. Install Dependencies
+pip install pandas matplotlib seaborn
+
+2. Ensure Dataset Availability
+
+Place the train.csv file in the same directory as sales_analysis.py or adjust the path in the script.
+
+3. Run the Analysis
+python sales_analysis.py
+
+4. View Results
+
+The script generates a line chart showing monthly revenue trends and saves it as:
+
+![Dashbroad Resual](/emr-cluster-steps-completed.png)
+
+## 📊 Results
+
+Monthly Revenue Trends: Shows revenue for each month with peak points highlighted and values displayed.
+
+Top 5 Sub-Categories: Identifies best-selling products.
+
+Regional Performance: Highlights revenue contribution by region and city.
+
+Shipping Efficiency: Calculates average delivery time by shipping method.
+
+Profit Margin Estimation: Evaluates business efficiency assuming a 20% profit margin.
